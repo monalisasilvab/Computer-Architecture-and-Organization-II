@@ -1,0 +1,50 @@
+0001	LSL r1, r0, #0
+08a9	LSR r1, r5, #2
+1548	ASR r0, r1, #21
+1891	ADD r1, r2, r2
+1a8b	SUB r3, r1, r2
+1d51	ADD r1, r2, #5
+1e6a	SUB r2, r5, #1
+250b	MOV r5, #11
+2b0a	CMP r3, #10
+340c	ADD r4, #12
+3d0a	SUB r5, #10
+402a	AND r2, r5
+404a	EOR r2, r1
+408a	LSL r2, r1
+40ca	LSR r2, r1
+412a	ASR r2, r5
+414a	ADC r2, r1
+418a	SBC r2, r1
+41ca	ROR r2, r1
+422a	TST r2, r5
+424a	NEG r2, r1
+428a	CMP r2, r1
+42ca	CMN r2, r1
+432a	ORR r2, r5
+434a	MUL r2, r1
+438a	BIC r2, r1
+43ca	MVN r2, r1
+462a	CPY r2, r5
+445a	ADD r2, r3
+465a	MOV r2, r3
+44aa	ADD r2, r5
+46aa	MOV r2, r5
+44cb	ADD r3, r1
+46cb	MOV r3, r1
+4556	CMP r6, r2
+45a2	CMP r2, r4
+45cd	CMP r5, r1
+478e	BLX r1
+470c	BX r1
+480c	LDR r0, [pc, #48]
+5023	STR r3, [r4, r0]
+52ff	STRH r7, [r7, r3]
+545b	STRB r3, [r3, r1]
+5659	LDRSB r1, [r3, r1]
+5897	LDR r7, [r2, r2]
+5a97	LDRH r7, [r2, r2]
+5c97	LDRB r7, [r2, r2]
+5e97	LDRSH r7, [r2, r2]
+6996	LDR r6, [r2, #24]
+6496	STR r6, [r2, #72]
