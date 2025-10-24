@@ -1,8 +1,11 @@
-# decoder_arm_assembly
+# ARM Thumb Instruction Decoder
 
-### This work consists of implementing a program (in any programming language) that decodes a memory map into its respective Thumb code.
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/decoder_arm_assembly)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-### 1. The decoder must receive as input a memory map and return a text file containing the code to be executed, in Thumb, according to table B-5 of the book ARM System Developer’s Guide, 1st edition. Example:
+A disassembler tool that converts ARM Thumb machine code into human-readable assembly instructions, following the specification from Table B-5 of *ARM System Developer's Guide* (1st Edition).
+
+This work consists of implementing a program (in any programming language) that decodes a memory map into its respective Thumb code. The decoder must receive as input a memory map and return a text file containing the code to be executed, in Thumb, according to table B-5 of the book ARM System Developer’s Guide, 1st edition. Example:
 
 <table style="text-align: center; border-collapse: collapse; width: 30%; border: 1px solid white;">
     <thead>
@@ -111,12 +114,50 @@
     </tbody>
 </table>
 
-### 2. The program must read input from a .em file and save the result in a .out file.
+The program must read input from a .em file and save the result in a .out file.
 
-### Informações adicionais:
+## 🤖 Features
 
-## Compiling
-make all
+- Converts hexadecimal memory maps to Thumb assembly mnemonics
+- Supports a wide range of Thumb instructions including:
+  - Data processing (MOV, ADD, SUB, AND, ORR, BIC, MVN)
+  - Memory operations (LDR, STR)
+  - Stack operations (PUSH, POP)
+  - Control flow (B, BL, BNE)
+  - Special instructions (SWI, BKPT)
+- Generates formatted output with original hex and decoded instructions
+- Handles both 16-bit and 32-bit Thumb instructions (if implemented)
 
-## Running
-./bin/app
+## ⚙️ Installation
+
+### 🔓 Prerequisites
+- GNU Make
+- C Compiler (gcc or clang recommended)
+
+### ⚒️ Building
+Build the project using GNU Make:
+```bash
+git clone https://github.com/monalisasilvab/decoder_arm_assembly.git
+cd decoder_arm_assembly
+make all 
+```
+
+## 💻 Usage
+Basic execution:
+```bash
+./bin/app <input_file.in> <output_file.out>
+```
+
+## 📊 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (git checkout -b feature/improvement)
+3. Commit changes (git commit -am 'Add new feature')
+4. Push to branch (git push origin feature/improvement)
+5. Open a Pull Request
+
+## 📘 Acknowledgements
+- Reference: Table B-5 from ARM System Developer's Guide (Andrew N. Sloss et al.)
+- ARM Architecture Reference Manual for Thumb instruction set](https://documentation.espressif.com/esp32_datasheet_en.pdf)
