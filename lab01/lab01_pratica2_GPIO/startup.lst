@@ -1,0 +1,54 @@
+
+bin/startup.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00000000 <.data>:
+   0:	e10f0000 	mrs	r0, CPSR
+   4:	e3c0001f 	bic	r0, r0, #31
+   8:	e3800013 	orr	r0, r0, #19
+   c:	e38000c0 	orr	r0, r0, #192	; 0xc0
+  10:	e129f000 	msr	CPSR_fc, r0
+  14:	eb000012 	bl	0x64
+  18:	eb000019 	bl	0x84
+  1c:	e3a04000 	mov	r4, #0
+  20:	e59f0074 	ldr	r0, [pc, #116]	; 0x9c
+  24:	e3a0161e 	mov	r1, #31457280	; 0x1e00000
+  28:	e5801000 	str	r1, [r0]
+  2c:	e59f006c 	ldr	r0, [pc, #108]	; 0xa0
+  30:	e1a01a84 	lsl	r1, r4, #21
+  34:	e5801000 	str	r1, [r0]
+  38:	eb000004 	bl	0x50
+  3c:	e2844001 	add	r4, r4, #1
+  40:	e3540010 	cmp	r4, #16
+  44:	1afffff5 	bne	0x20
+  48:	e3a04000 	mov	r4, #0
+  4c:	eafffff3 	b	0x20
+  50:	e3e014ff 	mvn	r1, #-16777216	; 0xff000000
+  54:	e2411001 	sub	r1, r1, #1
+  58:	e3510000 	cmp	r1, #0
+  5c:	1afffffc 	bne	0x54
+  60:	e12fff1e 	bx	lr
+  64:	e59f0038 	ldr	r0, [pc, #56]	; 0xa4
+  68:	e59f1038 	ldr	r1, [pc, #56]	; 0xa8
+  6c:	e5801000 	str	r1, [r0]
+  70:	e59f0034 	ldr	r0, [pc, #52]	; 0xac
+  74:	e5901000 	ldr	r1, [r0]
+  78:	e3c1161e 	bic	r1, r1, #31457280	; 0x1e00000
+  7c:	e5801000 	str	r1, [r0]
+  80:	e12fff1e 	bx	lr
+  84:	e59f0024 	ldr	r0, [pc, #36]	; 0xb0
+  88:	e59f1024 	ldr	r1, [pc, #36]	; 0xb4
+  8c:	e5801048 	str	r1, [r0, #72]	; 0x48
+  90:	e59f1020 	ldr	r1, [pc, #32]	; 0xb8
+  94:	e5801000 	str	r1, [r0]
+  98:	e12fff1e 	bx	lr
+  9c:	4804c190 	stmdami	r4, {r4, r7, r8, lr, pc}
+  a0:	4804c194 	stmdami	r4, {r2, r4, r7, r8, lr, pc}
+  a4:	44e000ac 	strbtmi	r0, [r0], #172	; 0xac
+  a8:	00040002 	andeq	r0, r4, r2
+  ac:	4804c134 	stmdami	r4, {r2, r4, r5, r8, lr, pc}
+  b0:	44e35000 	strbtmi	r5, [r3], #0
+  b4:	0000aaaa 	andeq	sl, r0, sl, lsr #21
+  b8:	00005555 	andeq	r5, r0, r5, asr r5
