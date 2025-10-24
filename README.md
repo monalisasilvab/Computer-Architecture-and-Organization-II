@@ -15,3 +15,7 @@ This repository contains the activities, practices and work carried out in the d
 3. setenv loadaddr 0x80000000
 4. tftp ${loadaddr} start.bin
 5. go ${loadaddr}
+
+setenv app "setenv autoload no;setenv ipaddr 10.4.1.2; setenv serverip 10.4.1.1; tftp 0x80000000 /tftpboot/app;echo ***Booting to BareMetal ***;go 0x80000000";run app
+
+setenv app "setenv autoload no;setenv ipaddr 10.4.1.2; setenv serverip 10.4.1.1; tftp 0x80000000 /tftpboot/startup.bin;echo ***Booting to BareMetal ***;go 0x80000000";run app
