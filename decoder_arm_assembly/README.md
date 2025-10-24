@@ -159,5 +159,5 @@ Contributions are welcome! Please follow these steps:
 5. Open a Pull Request
 
 ## 📘 Acknowledgements
-- Reference: Table B-5 from ARM System Developer's Guide (Andrew N. Sloss et al.)
-- ARM Architecture Reference Manual for Thumb instruction set](https://documentation.espressif.com/esp32_datasheet_en.pdf)
+- Reference: Table B-5 from ARM System Developer's Guide (Andrew N. Sloss et al.).
+- ARM Architecture Reference Manual for Thumb instruction set.
